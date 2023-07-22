@@ -6,7 +6,6 @@ Created on Mon Jul 10 14:28:31 2023
 """
 
 import praw
-import pandas as pd
 import datetime
 import yfinance as yf
 
