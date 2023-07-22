@@ -101,7 +101,8 @@ for spef_stock in distribution: #Add in Stock Info
     yf_ticker = yf.Ticker(the_temp).info
     spef_stock.append(yf_ticker['previousClose'])
     spef_stock.append(yf_ticker['open'])
-#'Distribution' is currently in form [ticker symbol, frequency, previous close price, open price]
+    spef_stock.append(round((yf_ticker['open']-yf_ticker['previousClose']),2))
+#'Distribution' is currently in form [ticker symbol, frequency, previous close price, open price,difference]
 print(distribution)
 
 
