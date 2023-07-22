@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 10 14:28:31 2023
-
-@author: Jerem
-"""
-
 import praw
 import datetime
 import yfinance as yf
