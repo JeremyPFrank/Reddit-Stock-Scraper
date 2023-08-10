@@ -102,10 +102,11 @@ for spef_stock in distribution: #Add in Stock Info
         yf_ticker = yf.Ticker(the_temp).info
         spef_stock.append(yf_ticker['previousClose'])
         spef_stock.append(yf_ticker['open'])
-        spef_stock.append(round((yf_ticker['open']-yf_ticker['previousClose']),2))
+        spef_stock.append(str(round(((yf_ticker['open']-yf_ticker['previousClose'])/yf_ticker['open'])*100,2)) + "%")
     except:
         spef_stock.append("ERROR: Not a Valid Stock")
-#'Distribution' is currently in form [ticker symbol, frequency, previous close price, open price,difference]
+        
+#'Distribution' is currently in form [ticker symbol, frequency, previous close price, open price,difference (%)]
 
 for report in distribution:
     print(report)
